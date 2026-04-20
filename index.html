@@ -1,0 +1,52 @@
+declare namespace file="http://expath.org/ns/file";
+let $HTML :=
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/styles/styles.css">
+        <title>Inventario de Exoplanetas</title>
+    </head>
+    <body>
+        <header>
+            <h1>Eco-Logistics</h1>
+            <nav>
+                <ul>
+                    <li><a href="#consulta1">Primera Consulta</a></li>
+                    <li><a href="#consulta2">Segunda Consulta</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <h2 id="consulta1">Consulta 1: Exoplanetas con temperatura media entre 10 y 35 grados</h2>
+                <ul>
+                    {
+                    for $p in //DeepSpaceInventory/Exoplaneta
+                    let $temp := number($p/TemperaturaMedia)
+                    where $temp > 10 and $temp < 35
+                    return <li>{ $p/Codigo/text() }</li>
+                    }
+                </ul>
+            </section>
+            <section>
+                <h2 id="consulta2">Consulta 2: Exoplanetas con atmósfera rica en oxígeno ordenados por distancia</h2>
+                <ul>
+                    {
+                        for $p in //DeepSpaceInventory/Exoplaneta 
+                        where $p/Atmosfera/Componente = "Oxígeno" 
+                        order by $p/DistanciaAniosLuz 
+                        return <li>{$p/NombreComun/text()}</li>
+                    }
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2026 Eco-Logistics. Hecho por Daniel Jimenez Ramirez.</p>
+            <a href="https://github.com/D7niel-18" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111432.png" alt="GitHub" width="20" height="20"> Github
+            </a>
+        </footer>
+    </body>
+</html>
+return file:write("index.html", $HTML)
