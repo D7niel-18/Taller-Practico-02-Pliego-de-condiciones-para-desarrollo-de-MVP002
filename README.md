@@ -8,7 +8,6 @@
 for $p in //DeepSpaceInventory/Exoplaneta where
   $p/TemperaturaMedia > 10 and $p/TemperaturaMedia < 35
 return $p/Codigo/text()
-<br>
 - Consulta 2. Ranking de planetas más cercanos a la Tierra que contengan "Oxígeno" en su atmósfera. <br>
   for $p in //DeepSpaceInventory/Exoplaneta 
     where $p/Atmosfera/Componente = "Oxígeno" 
