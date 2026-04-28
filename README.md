@@ -23,7 +23,7 @@ El ejercicio se divide en tres partes principales:
 
 3. Aplicación de Estilos con CSS
 
-- Finalmente, se aplicaron estilos CSS al documento HTML para mejorar su apariencia visual, incluyendo:
+Se aplicaron estilos CSS al documento HTML para mejorar su apariencia visual, incluyendo:
 
 - Variables con colores pedidos en la actividad
 - Tipo de fuente de letras
