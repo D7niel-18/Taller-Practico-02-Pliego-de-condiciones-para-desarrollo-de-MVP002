@@ -31,5 +31,5 @@ Se aplicaron estilos CSS al documento HTML para mejorar su apariencia visual, in
 - Bordes
 - Sombras
 
-- Tecnologias usadas: HTML, CSS, XQuery, XML.
-- Editores/Programas usados: Visual Studio Code, BaseX.
+Tecnologias usadas: HTML, CSS, XQuery, XML.
+Editores/Programas usados: Visual Studio Code, BaseX.
