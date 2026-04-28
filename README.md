@@ -3,18 +3,33 @@
 - Profesor: Willman Acosta
 - Asignatura: Lenguaje de marcas
 
-## Consultas de Negocio
-- Consulta 1. Filtrar y mostrar en una "galería visual" los planetas con temperatura entre 10°C y 35°C (Habitabilidad Oro). <br>
-for $p in //DeepSpaceInventory/Exoplaneta where
-  $p/TemperaturaMedia > 10 and $p/TemperaturaMedia < 35
-return $p/Codigo/text()
-- Consulta 2. Ranking de planetas más cercanos a la Tierra que contengan "Oxígeno" en su atmósfera. <br>
-  for $p in //DeepSpaceInventory/Exoplaneta 
-    where $p/Atmosfera/Componente = "Oxígeno" 
-    order by $p/DistanciaAniosLuz
-  return $p/NombreComun/text()
-  <br>
-- Consulta 3. Generador de "Ficha de Navegación" para un planeta concreto, extrayendo sus coordenadas y composición.
+## Descripción de la actividad
+El objetivo de esta actividad es trabajar con XQuery para realizar consultas sobre datos en formato XML y generar una salida en HTML, aplicando posteriormente estilos con CSS.
 
-- Tecnologias usadas: HTML, CSS, XQuery, XML
-- Editor usado: Visual Studio Code, BaseX
+El ejercicio se divide en tres partes principales:
+
+1. Realización de tres consultas en XQuery.
+2. Generación de un documento HTML a partir de los resultados obtenidos.
+3. Aplicación de estilos mediante CSS para mejorar la presentación visual.
+
+## Proceso de la actividad
+1. Consultas en XQuery
+
+- Se utilizaron consultas en XQuery para extraer información desde un archivo XML (exoplanetas.xml). Estas consultas fueron ejecutadas utilizando la herramienta BaseX.
+
+2. Generación del HTML
+
+- A partir de los resultados obtenidos en las consultas, se generó un documento HTML estructurado.
+
+3. Aplicación de Estilos con CSS
+
+- Finalmente, se aplicaron estilos CSS al documento HTML para mejorar su apariencia visual, incluyendo:
+
+- Variables con colores pedidos en la actividad
+- Tipo de fuente de letras
+- Espaciado
+- Bordes
+- Sombras
+
+- Tecnologias usadas: HTML, CSS, XQuery, XML.
+- Editores/Programas usados: Visual Studio Code, BaseX.
