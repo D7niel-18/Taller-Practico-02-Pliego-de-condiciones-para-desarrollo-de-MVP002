@@ -9,7 +9,7 @@ let $HTML :=
     </head>
     <body>
         <header>
-            <h1>Deep Space Inventory</h1>
+            <h1>Inventario de Exoplanetas</h1>
             <nav>
                 <ul>
                     <li><a href="#consulta1">Consulta 1 — Habitabilidad Oro</a></li>
